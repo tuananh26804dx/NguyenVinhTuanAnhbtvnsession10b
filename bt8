@@ -1,0 +1,62 @@
+#include <stdio.h>
+int main(){
+	int n;
+	printf("Nhap chi so mang: ");
+	scanf("%d",&n);
+	int arr[n];
+	int i,j,temp; 
+	
+	for(i = 0;i < n;i++){
+		printf("arr[%d] = ", i);
+		scanf("%d",&arr[i]); 
+	}
+	for(i=0;i<n;i++){
+		for(j=0;j<n-1-i;j++){
+			if(arr[j]>arr[j+1]){
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+			}
+		}
+	}
+	printf("\nMang sap xep tang dan bang noi bot\n");
+	for(i=0;i<n;i++){
+		printf("%d",arr[i]);
+	}
+	int x; 
+    printf("Nhap so ma ban can tim: ");
+    scanf("%d", &x);
+	
+	int left = 0,right=n - 1;
+    int mid;
+    int result = -1;
+    
+    while(left <= right){
+        mid=(left + right) / 2;
+        
+        if(arr[mid] == x) {
+            result = mid;
+            break;
+        }
+        else if (arr[mid] < x) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+    
+    if(result != -1) {
+        printf("Tim thay %d tai vi tri: %d", x, result);
+    }else{
+        printf("Khong tim thay %d", x);
+    }
+    
+	
+	
+	
+	
+	
+	
+	
+}
