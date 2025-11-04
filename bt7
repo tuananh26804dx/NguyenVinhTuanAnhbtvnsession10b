@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main(){
+	int n;
+	printf("Nhap chi so mang: ");
+	scanf("%d" , &n );
+	int arr[n];
+	int i;
+	
+	for(i=0;i < n;i++ ){
+		printf("arr[%d] = " , i );
+		scanf("%d" , &arr[i]); 
+	} 
+	    int x; 
+	
+	printf("Nhap so ma ban can tim: ");
+	scanf("%d",&x);
+	int left = 0,right=n-1;
+	int mid;
+	int result=-1;
+	while( left < right){
+		mid=(left + right) / 2 ;
+		if(arr[mid] < x){
+			left = mid + 1 ; 
+		}else{
+			right = mid; 
+		} 
+	} 
+	if(arr[left] = x){
+		result = left; 
+	} 
+	printf("%d",result); 
+	
+	return 0; 
+} 
