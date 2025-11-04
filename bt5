@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(){
+	int n;
+	printf("Nhap chi so mang: ");
+	scanf("%d", &n );
+	int arr[n];
+	int i;
+	
+	for(i = 0;i < n;i++){
+		printf("arr[%d] = " , i );
+		scanf("%d" , &arr[i]); 
+	}
+	int x ; 
+	printf("Nhap so ma ban can biet: ");
+	scanf("%d" , &x );
+	int j , count = 0; 
+	
+	for(i=0;i < n;i++){
+		if ( x == arr[i]){
+		    count++; 
+		} 
+	} 
+	printf("Tong so lan xuat hien la : %d ", count ); 
+	
+	return 0; 
+} 
