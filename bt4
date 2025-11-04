@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+	int number[5]={3,4,1,5,2};
+	int arrSize = sizeof(number)/sizeof(int);
+	printf("Mang chua sap xep:");
+	for(int i=0;i<arrSize;i++){
+		printf("%d\t",numbers[i]); 
+	}
+	for(int i=0;i<arrSize;i++){
+		for(int j=0;j<arrSize-1-i;j++){
+			if(numbers[j+1]<number[j]){
+				int temp = numbers[j];
+				numbers[j]=numbers[j+1];
+				numbers[j+1]=temp; 
+			} 
+		}
+		
+	} 
+	printf("\nMang da sap xep:");
+		for(int i=0;i<arrSize;i++){
+			printf("%d\t",numbers[i]); 
+	} 
+} 
